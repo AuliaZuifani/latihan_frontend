@@ -17,3 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('dosen_wali', \App\Http\Controllers\DosenWaliController::class);
+Route::resource('mahasiswa', \App\Http\Controllers\MahasiswaController::class);
+
