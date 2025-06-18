@@ -1,66 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+BACKEND
+1. git clone-> link nya
+2. open vsCode, composer install
+3. di .env bagian default.database ganti ke nama db nya kita
+4. php spark serve kalo db sudah di insertin semuanya.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+FRONTEND
+1. composer create-project laravel/laravel nama_folder
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2. ke http controller lalu buat controller sesuai nama tabel contoh (mahasiswaController.php)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+3. ke resource masuk ke views nya terus bikin crud nya tapi harus bikin folder dulu contoh (mahasiswa) di dalemnya bikin crud create.blade.php lalu edit.blade.php lalu index.blade.php
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+4. ke routes->web.php
+Route::resource('dosen_wali', \App\Http\Controllers\DosenWaliController::class);
+kalo sudah jangan lupa bikin folder layouts di dalemnya bikin app.blade.php
 
-## Learning Laravel
+5. kalo sudah crud composer install
+6. php artisan key:generate
+7. php artisan serve
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+kalo ada perubahan:
+php artisan config:clear
+php artisan view:clear
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+GITHUB
+1. git init
+2. git add .
+3. git commit -m "initial commit"
+4. git remote add origin https://github.com/kamu/sistem-promosi.git (salin link repo yang sudah dibikin)
+5. git branch -M main
+6. git push -u origin main
 
-## Laravel Sponsors
+https://github.com/AuliaZuifani/latihan_uas_pbf
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+https://github.com/AuliaZuifani/latihan_frontend
+https://github.com/AuliaZuifani/latihan_backend
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+error: remote origin already exists.
+PS C:\laragon\www\PBF> git remote -v
+>>
+origin  https://github.com/Alledanaralle/PBF.git (fetch)
+origin  https://github.com/Alledanaralle/PBF.git (push)
+PS C:\laragon\www\PBF> git remote remove origin
+PS C:\laragon\www\PBF> git remote add origin https://github.com/AuliaZuifani/latihan_backend
+PS C:\laragon\www\PBF> git push -u origin main
+Enumerating objects: 544, done.
+Counting objects: 100% (544/544), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (215/215), done.
+Writing objects: 100% (544/544), 172.49 KiB | 7.19 MiB/s, done.
+Total 544 (delta 322), reused 526 (delta 313), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (322/322), done.
+To https://github.com/AuliaZuifani/latihan_backend
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\laragon\www\PBF> 
